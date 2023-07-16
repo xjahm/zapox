@@ -7,12 +7,17 @@ screen_size2 = (screen_size[0] / 2, screen_size[1] - 20)
 screen = pygame.display.set_mode(screen_size)
 into = True
 
+pygame.display.set_caption("Zapox")
+
+icono = pygame.image.load("imagenes/icono.png")
+pygame.display.set_icon(icono)
+
 blanco = 255,255,255
 azul = 0,0,255
 amarillo = 255, 255, 0
 verde = 0, 255, 0
 
-speed = 0.1
+speed = 1
 
 started = True
 
@@ -25,7 +30,7 @@ zombies = []
 playercords = [200, 200]
 
 def gameover(reason) :
-    print("Game over, round: "+ronda)
+    print("Game over, Round: "+str(ronda),"Reason: "+reason)
 
 def nuevaronda(n, zombies) :
     d_zombies = 0
@@ -65,10 +70,9 @@ while into:
             playercords[1] -= speed
         elif keys[pygame.K_DOWN]:
             playercords[1] += speed
-        elif keys[pygame.K_a]:
-            speed += 0.001
-        elif keys[pygame.K_d]:
-            speed -= 0.001
+    else :
+        into = F
+        gameover("Te chocaste contra las paredes")
 
 
     screen.fill((255, 255, 255))
@@ -88,7 +92,7 @@ while into:
                 x[1] += st_speed * ronda * 4
             else :
                 into = False
-                gameover("Un zombi llego al final del mapa")
+                gameover("Un zombi llego al tesoro")
             pygame.draw.circle(screen, verde, tuple(x), 30)
     else :
         ronda += 1
