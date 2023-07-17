@@ -9,6 +9,9 @@ Tu objetivo defender el tesoro de los zombis. Sientete libre de utilizar este mi
 
 ## Controles
 W | Moverte para arriba
+
 A | Moverte para la izquierda
+
 S | Moverte para abajo
+
 D | Moverte para la derecha
