@@ -5,4 +5,10 @@
 ## Que es Zapox?
 
 Zapox es un divertido juego con base en consola creado en pygame.
-Tu objetivo defender el tesoro de los zombis.
+Tu objetivo defender el tesoro de los zombis. Sientete libre de utilizar este minijuego en todas las maneras que quieras.
+
+## Controles
+W | Moverte para arriba
+A | Moverte para la izquierda
+S | Moverte para abajo
+D | Moverte para la derecha
